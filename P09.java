@@ -4,17 +4,26 @@ package com.company;
 
 public class P09 {
     public static void main(String[] args) {
-        int sum=0,a,temp;
-        for (int i=100;i<=999;i++){
+        int a,temp;
+        for (int i=0;i<=1000;i++){
             temp=i;
-            while (i>0) {
-                a = i % 10;
+            int sum=0;
+            while (temp>0) {
+                a = temp % 10;
                 sum = sum + (a * a * a);
-                i = i / 10;
+                temp = temp / 10;
             }
-            if (sum==temp){
+            if (sum==i){
                 System.out.println(sum);
             }
         }
     }
 }
+
+//OUTPUT
+//        0
+//        1
+//        153
+//        370
+//        371
+//        407
